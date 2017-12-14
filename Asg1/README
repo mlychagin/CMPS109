@@ -1,0 +1,25 @@
+Mikhail Lychagin
+mlychagi@ucsc.edu
+1492381
+
+Files Included:
+Makefile
+Makefile.dep
+bigint.cpp
+bigint.h
+debug.cpp
+khail Lychagin
+mlychagi@ucsc.edu
+1492381
+:debug.h
+iterstack.h
+libfns.cpp
+libfns.h
+main.cpp
+relops.h
+scanner.cpp
+scanner.h
+ubigint.cpp
+ubigint.h
+util.cpp
+util.h

@@ -1,0 +1,88 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.2
+date	2017.07.10.05.57.01;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2017.07.10.05.22.36;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: ubigint.h,v 1.1 2017-07-09 22:22:36-07 - - $
+
+#ifndef __UBIGINT_H__
+#define __UBIGINT_H__
+
+#include <exception>
+#include <iostream>
+#include <limits>
+#include <utility>
+using namespace std;
+
+#include "debug.h"
+#include "relops.h"
+
+class ubigint {
+   friend ostream& operator<< (ostream&, const ubigint&);
+   private:
+      using udigit_t = unsigned char;
+      using ubigvalue_t = vector<udigit_t>;
+      ubigvalue_t ubig_value;
+   public:
+      void multiply_by_2();
+      void divide_by_2();
+
+      ubigint() = default; // Need default ctor as well.
+      ubigint (const string&);
+
+      string tostring() const;
+      string tostringfinal() const;
+      ubigint operator+ (const ubigint&) const;
+      ubigint operator- (const ubigint&) const;
+      ubigint operator* (const ubigint&) const;
+      ubigint operator/ (const ubigint&) const;
+      ubigint operator% (const ubigint&) const;
+
+      bool operator== (const ubigint&) const;
+      bool operator<  (const ubigint&) const;
+};
+
+#endif
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: ubigint.h,v 1.11 2016-03-24 19:43:57-07 - - $
+d19 2
+a20 2
+	  using ubigvalue_t = vector<udigit_t>;
+	  ubigvalue_t ubig_value;
+d28 2
+a29 2
+	  string tostring() const;
+	  string tostringfinal() const;
+@

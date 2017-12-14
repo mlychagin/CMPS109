@@ -1,0 +1,8 @@
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c ubigint.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c bigint.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c libfns.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c scanner.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c debug.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c util.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -c main.cpp
+g++ -std=gnu++14 -g -O0 -Wall -Wextra -Wold-style-cast -o ydc ubigint.o bigint.o libfns.o scanner.o debug.o util.o main.o
